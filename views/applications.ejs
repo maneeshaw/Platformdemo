@@ -35,9 +35,13 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 </script> -->
+<ul>
+	<% apps.forEach(function(app){ %>
+		<li>
+			<%= app.label %> - <img src="<%= app.logoUrl %>" >
+		</li>
+	<% }); %>
+</ul>
 
-	<p> 
-	 <%= body %>
-	</p>
 </body>
 </html>

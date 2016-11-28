@@ -26,11 +26,11 @@ router.get('/applications', function(req, res, next) {
      'content-type': 'application/json',
      accept: 'application/json' } };
 
-request(options, function (error, response, body) {
+request(options, function (error, response, apps) {
   if (error) throw new Error(error);
 
-  console.log(body);
-    res.render('applications', { title: 'Applications', body: body });
+  console.log(apps);
+    res.render('applications', { title: 'Applications', apps: apps });
 });
 
 });
