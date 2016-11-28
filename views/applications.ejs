@@ -35,16 +35,14 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 </script> -->
-
-<ul>
+<div class="container">
+<ul class="app-button-list">
 	<% apps.forEach(function(app){ %>
-		<li>
+		<li class="app-button-wrapper">
 			<%= app.label %> - <img src="<%= app.logoUrl %>" >
 		</li>
 	<% }); %>
 </ul>
-<p>
-	<%= apps %>
-</p>
+</div>
 </body>
 </html>

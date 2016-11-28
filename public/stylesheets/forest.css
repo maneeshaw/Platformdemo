@@ -125,6 +125,29 @@ background-color: white;
   display: none;
 }
 
+.container {
+    width: 1165px;
+    margin: 0 auto;
+}
+
+.app-buttons-list {
+    min-height: 170px;
+    margin-top: -1px;
+    padding: 41px 0 10px;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: #fff;
+}
+
+.app-button-wrapper {
+    display: block;
+    width: 146px;
+    height: 90px;
+    margin: 0 0 32px 41px;
+    float: left;
+}
+
 @media screen and (max-width: 600px){
   .box.left{
  border-right: 0;
