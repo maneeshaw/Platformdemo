@@ -128,6 +128,7 @@ background-color: white;
 .container {
     width: 1165px;
     margin: 0 auto;
+
 }
 
 .app-buttons-list {
@@ -138,6 +139,10 @@ background-color: white;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     background: #fff;
+}
+
+.clearfix {
+    display: block;
 }
 
 .app-button-wrapper {
