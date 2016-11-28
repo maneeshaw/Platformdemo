@@ -4,6 +4,24 @@
 	<title>Applications</title>
 </head>
 <body>
+<script type="text/javascript">
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://forest.okta.com/api/v1/users//appLinks",
+  "method": "GET",
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "authorization": "SSWS 00Xa5X9HjCcctwhj47zX0GMuX4edvxuQByjy4aO3UW",
+    "cache-control": "no-cache",
+    "postman-token": "7f2d541a-5b38-3ab2-a8d7-d94c438cc5b5"
+  }
+}
 
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+</script>
 </body>
 </html>
