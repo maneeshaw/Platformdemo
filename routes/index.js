@@ -26,11 +26,13 @@ router.get('/applications', function(req, res, next) {
      'content-type': 'application/json',
      accept: 'application/json' } };
 
-request(options, function (error, response, apps) {
+request(options, function (error, response, body) {
   if (error) throw new Error(error);
 
-  console.log(apps);
+  console.log(body);
   console.log("hello");
+
+  var apps = JSON.parse(body)
     res.render('applications', { title: 'Applications', apps: apps });
 });
 
