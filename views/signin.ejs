@@ -22,8 +22,16 @@
         <div id="okta-login-container"></div>
         <script type="text/javascript">
           var orgUrl = 'https://forest.okta.com';
+
           var oktaSignIn = new OktaSignIn({
-            baseUrl: orgUrl
+            baseUrl: orgUrl,
+            features: {
+                rememberMe: true,
+                smsRecovery: true,
+                selfServiceUnlock: true
+                },
+
+          
           });
 
           oktaSignIn.renderEl({
