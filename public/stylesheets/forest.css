@@ -1,3 +1,10 @@
+h3{
+  color: #fff;
+}
+
+p{
+  color: #fff;
+}
 #okta-sign-in .button-primary {
   background: #44867c;
   align-items: center;
@@ -17,6 +24,7 @@
   background-position: center;
   font-family:helvetica;
   background-size: cover;
+  background-attachment: fixed;
 
 }
 
@@ -138,7 +146,7 @@ background-color: white;
     border-top: 1px solid #ddd;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    background: #fff;
+    background:transparent;
 }
 
 .clearfix {
@@ -151,6 +159,47 @@ background-color: white;
     height: 90px;
     margin: 0 0 32px 41px;
     float: left;
+}
+
+.app-button {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #fbfbfb;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiZmJmYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='),#fbfbfb;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb),color-stop(100%, #f8f8f8)),#fbfbfb;
+    background: -moz-linear-gradient(#fbfbfb,#f8f8f8),#fbfbfb;
+    background: -webkit-linear-gradient(#fbfbfb,#f8f8f8),#fbfbfb;
+    background: linear-gradient(#fbfbfb,#f8f8f8),#fbfbfb;
+    -moz-box-shadow: rgba(0,0,0,0.05) 0 1px 0,rgba(255,255,255,0.1) 0 1px 0 0 inset;
+    -webkit-box-shadow: rgba(0,0,0,0.05) 0 1px 0,rgba(255,255,255,0.1) 0 1px 0 0 inset;
+    box-shadow: rgba(0,0,0,0.05) 0 1px 0,rgba(255,255,255,0.1) 0 1px 0 0 inset;
+    border-color: #c3c3c3;
+    border-bottom-color: #bbb;
+    color: #505050 !important;
+    display: block;
+    position: relative;
+    height: 64px;
+    padding: 1px 0;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+}
+
+.app-button-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: 0.0625em;
+    width: 144px;
+    margin: 7px auto 0;
+    color: #a0a0a0;
+    font-size: 13px;
+    line-height: 14px;
+    text-align: center;
 }
 
 @media screen and (max-width: 600px){
