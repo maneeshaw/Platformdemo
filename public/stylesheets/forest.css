@@ -24,9 +24,9 @@
   color: #ccc;
 } 
 
-#okta-sign-in .okta-sign-in-header {
+/*#okta-sign-in .okta-sign-in-header {
   display: none;
-}
+}*/
 
 #okta-sign-in .input-icon:before, #okta-sign-in .input-tooltip:before {
   color: transparent;
@@ -131,5 +131,8 @@ background-color: white;
 }
 .box{
   padding: 0;
+}
+.w3-top{
+  max-width: auto;
 }
 }
