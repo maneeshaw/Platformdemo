@@ -30,6 +30,7 @@ request(options, function (error, response, apps) {
   if (error) throw new Error(error);
 
   console.log(apps);
+  console.log("hello");
     res.render('applications', { title: 'Applications', apps: apps });
 });
 
