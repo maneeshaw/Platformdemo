@@ -14,4 +14,8 @@ router.get('/registration', function(req, res, next) {
   res.render('registration', { title: 'Registration' });
 });
 
+router.get('/applications', function(req, res, next) {
+  res.render('applications', { title: 'Applications' });
+});
+
 module.exports = router;

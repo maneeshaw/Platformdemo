@@ -22,7 +22,7 @@
         <div id="okta-login-container"></div>
         <script type="text/javascript">
           var orgUrl = 'https://forest.okta.com';
-
+          var redirectUrl = "/applications"
           var oktaSignIn = new OktaSignIn({
             baseUrl: orgUrl,
             features: {
@@ -39,7 +39,7 @@
             },
             function(res) {
               if (res.status === 'SUCCESS') {
-                res.session.setCookieAndRedirect(orgUrl);
+                res.session.setCookieAndRedirect(redirectUrl);
               }
             }
           );
