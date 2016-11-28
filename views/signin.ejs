@@ -1,0 +1,69 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Forest</title>
+  <link rel="shortcut icon" href="https://www.wwf.org.uk/sites/default/files/favicon.ico"/>
+  <!-- Core widget js and css -->
+  <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.7.0/js/okta-sign-in.min.js" type="text/javascript"></script>
+  <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.7.0/css/okta-sign-in.min.css" type="text/css" rel="stylesheet">
+  <link href="custom-okta-login.css" type="text/css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="/stylesheets/forest.css">
+</head>
+<body class="SignIn">
+    <!-- SignIn Section -->
+    <div class="w3-container w3-padding-32" id="SignIn">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Sign In</h3>
+    </div>
+
+    <div class="oktalogin">
+      <div class="box left">
+        <div id="okta-login-container"></div>
+        <script type="text/javascript">
+          var orgUrl = 'https://example.okta.com';
+          var oktaSignIn = new OktaSignIn({
+            baseUrl: orgUrl
+          });
+
+          oktaSignIn.renderEl({
+              el: '#okta-login-container'
+            },
+            function(res) {
+              if (res.status === 'SUCCESS') {
+                res.session.setCookieAndRedirect(orgUrl);
+              }
+            }
+          );
+        </script>
+      </div>
+
+      <div class="box right">
+        <div class='socialauth linkedin'><a>Linkedin</a></div>
+        <div class='socialauth facebook'><a>Facebook</a></div>
+        <div class='socialauth google'><a>Google</a></div>
+        <div class='socialauth microsoft'><a>Microsoft</a></div>
+        <div class='socialauth signup'><a href="/registration">Sign Up</a></div>
+      </div>
+    </div>
+
+    <!--   Partners Section -->
+    <!-- <div class="w3-container w3-padding-32" id="Partners">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Partners</h3>
+    </div> -->
+
+
+    <!--   Employees Section -->
+    <!-- <div class="w3-container w3-padding-32" id="Employees">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Employees</h3>
+    </div> -->
+
+    <!-- End page content
+</div>
+
+<!-- Footer -->
+    <footer class="w3-center w3-padding-16" style="background-color:">
+      <p>Copyright 2016 <span class="w3-hover-text-green">Maneesha Wijesighe</span></p>
+    </footer>
+</body>
+</html>

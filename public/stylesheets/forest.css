@@ -1,0 +1,119 @@
+
+#okta-sign-in .button-primary {
+  background: #44867c;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 14px;
+  border: 0px;
+}
+
+.SignIn{
+  
+  background-image: url("http://cdn.zmescience.com/wp-content/uploads/2015/01/Polar-Bear-animals-34693849-1440-900.jpg");
+  font-family:helvetica;
+  background-size: cover;
+
+}
+
+#okta-sign-in .button-primary:hover{
+  color: #ccc;
+} 
+
+#okta-sign-in .okta-sign-in-header {
+  display: none;
+}
+
+#okta-sign-in .input-icon:before, #okta-sign-in .input-tooltip:before {
+  color: transparent;
+}
+
+.w3-hover-text-green {
+  cursor: default;;
+}
+
+.oktalogin {
+  margin: 0 100px;
+  width: auto;
+  height: 450px;
+  /*background-color: #F1F1F1;*/
+  background-color: rgba(255,255,255,0.5);
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 75px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #333;
+}
+
+.o-form-input-container {
+  background-color: #fff;
+
+}
+
+.box {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box.left {
+  border-right: 1px solid #ccc;
+}
+
+.auth-container {
+  margin: 0;
+  border: 0;
+}
+
+.socialauth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.socialauth a:hover{
+  color: #ccc;
+  text-decoration:none;
+
+} 
+
+.linkedin {
+  background: #007AB6;
+}
+
+.facebook {
+  background: #3C66C4;
+}
+
+.google {
+  background: #CF4332;
+}
+
+.microsoft {
+  background: #287BBD;
+}
+
+.signup {
+  background: #44867c;
+}
+
+.okta-form-input-field{
+background-color: white;
+}
+
+.okta-form-title{
+  display: none;
+}
