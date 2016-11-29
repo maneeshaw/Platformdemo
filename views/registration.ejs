@@ -99,7 +99,7 @@ $("#button").click(function(e) {
   "crossDomain": true,
   "url": "https://forest.okta.com/api/v1/users?activate=true",
   "method": "POST",
-  "data": data,
+  "data": JSON.stringify(data),
   "headers": {
     "accept": "application/json",
     "content-type": "application/json",
