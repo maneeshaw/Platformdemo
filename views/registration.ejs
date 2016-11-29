@@ -19,10 +19,10 @@
   <div class="module">
 
     <form class="form" id="registration">
-      <input type="text" placeholder="First Name" class="textbox" />
-      <input type="text" placeholder="Last Name" class="textbox" />
-      <input type="text" placeholder="Email Address" class="textbox" />
-      <input type="password" placeholder="Password" class="textbox" />
+      <input name="firstName" type="text" placeholder="First Name" class="textbox" />
+      <input name="lastName" type="text" placeholder="Last Name" class="textbox" />
+      <input name="email" type="text" placeholder="Email Address" class="textbox" />
+      <input name="password" type="password" placeholder="Password" class="textbox" />
       <select name="securityQuestion" class="security-question-dropdown x-created textbox">
                             <optgroup>
                               <option value="" selected="">Recovery Question</option>
@@ -50,7 +50,7 @@
                                 <option value="custom">Create your own security question</option>
                             </optgroup>
                         </select>
-      <input type="text" placeholder="Recovery Answer" class="textbox" />
+      <input name="answer" type="text" placeholder="Recovery Answer" class="textbox" />
       <input id="button" type="button" value="Submit" class="button"/>
     </form>
   </div>
