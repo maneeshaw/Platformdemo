@@ -75,47 +75,47 @@
 };
 </script>
 
-  <script type="text/javascript">
+<script type="text/javascript">
 
 $("#button").click(function(e) {
-        var formdata = $("#registration").serializeObject();
-        var data = {
-  "profile": {
-    "firstName": formdata.firstName,
-    "lastName": formdata.lastName,
-    "email": formdata.email,
-    "login": formdata.email
-  },
-  "credentials": {
-    "password" : { "value": formdata.password },
-    "recovery_question": {
-      "question": formdata.securityQuestion,
-      "answer": formdata.answer
+  var formdata = $("#registration").serializeObject();
+  var data = {
+    "profile": {
+      "firstName": formdata.firstName,
+      "lastName": formdata.lastName,
+      "email": formdata.email,
+      "login": formdata.email
+    },
+    "credentials": {
+      "password" : { "value": formdata.password },
+      "recovery_question": {
+        "question": formdata.securityQuestion,
+        "answer": formdata.answer
+      }
     }
   }
-}
-        var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://forest.okta.com/api/v1/users?activate=true",
-        "method": "POST",
-        "data": data,
-        "headers": {
-          "accept": "application/json",
-          "content-type": "application/json",
-          "authorization": "SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx",
-          "cache-control": "no-cache",
-          "postman-token": "628d1039-829f-315f-5773-0e38f4dd5a03"
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://forest.okta.com/api/v1/users?activate=true",
+  "method": "POST",
+  "data": data,
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "authorization": "SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx",
+    "cache-control": "no-cache",
+    "postman-token": "628d1039-829f-315f-5773-0e38f4dd5a03"
+    }
   }
-}
 
-$.ajax(settings).done(function (response) {
-  window.location = "http://maneeshademo.com/application"
-  console.log(response);
+  $.ajax(settings).done(function (response) {
+    window.location = "http://maneeshademo.com/application"
+    console.log(response);
+  });
+  e.preventDefault(); // avoid to execute the actual submit of the form.
 });
-    e.preventDefault(); // avoid to execute the actual submit of the form.
-});
-  </script>
+</script>
 
 
 <!-- Footer -->
