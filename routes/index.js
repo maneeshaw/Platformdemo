@@ -29,7 +29,7 @@ router.get('/applications', function(req, res, next) {
   headers: 
    { 'postman-token': '4de78559-5319-522b-476e-656a5ac6ae68',
      'cache-control': 'no-cache',
-     authorization: 'SSWS 00Xa5X9HjCcctwhj47zX0GMuX4edvxuQByjy4aO3UW',
+     authorization: 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx',
      'content-type': 'application/json',
      accept: 'application/json' 
    } 
