@@ -95,7 +95,7 @@ Your account has created. Please check your email to activate your account and t
             console.log(formdata);
             $.ajax({
                 type: "POST",
-                url: "https://forest.okta.com/api/v1/users?activate=true",
+                url: "https://forest.okta.com/api/v1/auth",
                 data: formdata,
                 dataType: "json",
                 headers: {
@@ -105,7 +105,7 @@ Your account has created. Please check your email to activate your account and t
                     // cache-control: "no-cache",
                     "postman-token": "628d1039-829f-315f-5773-0e38f4dd5a03"
                           }
-                          
+
                 success: function(data) {
                     //var obj = jQuery.parseJSON(data); if the dataType is not specified as json uncomment this
                     // do what ever you want with the server response
