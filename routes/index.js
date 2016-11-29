@@ -8,14 +8,38 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
+
+// signin
 router.get('/signin', function(req, res, next) {
   res.render('signin', { title: 'Sign In' });
 });
 
+
+// Registration
+
 router.get('/registration', function(req, res, next) {
+  var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://forest.okta.com/api/v1/users',
+  qs: { activate: 'false' },
+  headers: 
+   { 'postman-token': 'b86beb8c-b2df-3b11-1f21-c75430566e71',
+     'cache-control': 'no-cache',
+     authorization: 'SSWS 00Xa5X9HjCcctwhj47zX0GMuX4edvxuQByjy4aO3UW',
+     'content-type': 'application/json',
+     accept: 'application/json' } };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
   res.render('registration', { title: 'Registration' });
 });
 
+
+// Applications
 router.get('/applications', function(req, res, next) {
   var options = { method: 'GET',
   url: 'https://forest.okta.com/api/v1/users/me/appLinks',
@@ -30,13 +54,12 @@ request(options, function (error, response, body) {
   if (error) throw new Error(error);
 
   console.log(body);
-  console.log("hello");
 
   var apps = JSON.parse(body)
     res.render('applications', { title: 'Applications', apps: apps });
 });
 
-});
+
 
 
 
