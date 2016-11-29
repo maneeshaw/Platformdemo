@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-git.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" href="https://www.wwf.org.uk/sites/default/files/favicon.ico"/>
   <!-- Core widget js and css -->
   <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.7.0/js/okta-sign-in.min.js" type="text/javascript"></script>
@@ -17,7 +18,7 @@
 <div id="bg">
   <div class="module">
 
-    <form class="form">
+    <form class="form" id="registration">
       <input type="text" placeholder="First Name" class="textbox" />
       <input type="text" placeholder="Last Name" class="textbox" />
       <input type="text" placeholder="Email Address" class="textbox" />
@@ -50,10 +51,37 @@
                             </optgroup>
                         </select>
       <input type="text" placeholder="Recovery Answer" class="textbox" />
-      <a href="http://maneeshademo.com/applications" class="button">Next</a>
+      <input id="button" type="button" value="Submit" class="button"/>
     </form>
   </div>
 </div>
+  <script type="text/javascript">
+
+$("#button").click(function(e) {
+        console.log("hello")
+        var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://forest.okta.com/api/v1/users?activate=true",
+        "method": "POST",
+        "data": $("#registration").serialize(),
+        "headers": {
+          "accept": "application/json",
+          "content-type": "application/json",
+          "authorization": "SSWS 00Xa5X9HjCcctwhj47zX0GMuX4edvxuQByjy4aO3UW",
+          "cache-control": "no-cache",
+          "postman-token": "628d1039-829f-315f-5773-0e38f4dd5a03"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  window.location = "http://maneeshademo.com/application"
+  console.log(response);
+});
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+});
+  </script>
+
 
 <!-- Footer -->
     <footer class="w3-center w3-padding-16" style="background-color:">
