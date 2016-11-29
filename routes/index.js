@@ -31,7 +31,9 @@ router.get('/applications', function(req, res, next) {
      'cache-control': 'no-cache',
      authorization: 'SSWS 00Xa5X9HjCcctwhj47zX0GMuX4edvxuQByjy4aO3UW',
      'content-type': 'application/json',
-     accept: 'application/json' } };
+     accept: 'application/json' 
+   } 
+ };
 
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
@@ -40,6 +42,7 @@ request(options, function (error, response, body) {
 
   var apps = JSON.parse(body)
     res.render('applications', { title: 'Applications', apps: apps });
+  });
 });
 
 
@@ -49,3 +52,5 @@ request(options, function (error, response, body) {
 
 
 module.exports = router;
+
+
