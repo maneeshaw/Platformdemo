@@ -22,7 +22,7 @@
       <input type="text" placeholder="First Name" class="textbox" />
       <input type="text" placeholder="Last Name" class="textbox" />
       <input type="text" placeholder="Email Address" class="textbox" />
-      <input type="text" placeholder="Password" class="textbox" />
+      <input type="password" placeholder="Password" class="textbox" />
       <select name="securityQuestion" class="security-question-dropdown x-created textbox">
                             <optgroup>
                               <option value="" selected="">Recovery Question</option>
@@ -58,7 +58,8 @@
   <script type="text/javascript">
 
 $("#button").click(function(e) {
-        console.log("hello")
+        var formdata = $("#registration").serialize();
+        console.log(formdata)
         var settings = {
         "async": true,
         "crossDomain": true,
