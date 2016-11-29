@@ -22,9 +22,9 @@ router.get('/registration', function(req, res, next) {
 
 var options = { method: 'POST',
   url: 'https://forest.okta.com/api/v1/users',
-  qs: { activate: 'false' },
+  qs: { activate: 'true' },
   headers: 
-   { 'postman-token': 'b86beb8c-b2df-3b11-1f21-c75430566e71',
+   { 'postman-token': '7bc470a5-4789-cd7d-9588-14be8173aab0',
      'cache-control': 'no-cache',
      authorization: 'SSWS 00Xa5X9HjCcctwhj47zX0GMuX4edvxuQByjy4aO3UW',
      'content-type': 'application/json',
