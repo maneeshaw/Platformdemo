@@ -27,7 +27,8 @@ router.get('/applications', function(req, res, next) {
   var options = { method: 'GET',
   url: 'https://forest.okta.com/api/v1/users/me/appLinks',
   headers: 
-   // { 'postman-token': '4de78559-5319-522b-476e-656a5ac6ae68',
+   { 
+    // 'postman-token': '4de78559-5319-522b-476e-656a5ac6ae68',
      'cache-control': 'no-cache',
      authorization: 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx',
      'content-type': 'application/json',
