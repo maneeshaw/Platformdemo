@@ -50,8 +50,10 @@ console.log("hello");
    if (error || !response.ok) {
      console.log(error);
    } else {
-    res.redirect("/signin");
-     
+    var userId = res.user.id;
+    var query = "?userId=" + id; 
+    var redirectUrl = "/applications"
+    res.redirect(redirectUrl + query);
    }
  });
 });
