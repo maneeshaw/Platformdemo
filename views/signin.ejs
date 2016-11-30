@@ -39,7 +39,9 @@
             },
             function(res) {
               if (res.status === 'SUCCESS') {
-                // res.session.setCookieAndRedirect(redirectUrl);
+                var id = res.user.id;
+                var query = "?userId=" + id; 
+                res.session.setCookieAndRedirect(redirectUrl + query);
                 console.log(res.user)
               }
             }
