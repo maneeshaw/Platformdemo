@@ -46,11 +46,11 @@ console.log("hello");
  .accept('json')
  .set('Authorization', 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx')
  .send(data)
- .end(function(error, res){
-   if (error || !res.ok) {
+ .end(function(error, response){
+   if (error || !response.ok) {
      console.log(error);
    } else {
-    res.redirect("/applications")
+    res.redirect("/applications");
      
    }
  });
