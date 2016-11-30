@@ -44,15 +44,14 @@ console.log("hello");
  .query({ activate: 'false' })
  .type('application/json')
  .accept('json')
-
  .set('Authorization', 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx')
-
  .send(data)
  .end(function(error, res){
    if (error || !res.ok) {
      console.log(error);
    } else {
-     console.log(res.body);
+    res.redirect("/applications")
+     
    }
  });
 });
