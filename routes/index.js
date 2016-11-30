@@ -41,7 +41,7 @@ console.log("hello");
 
  superrequest
  .post('https://forest.okta.com/api/v1/users')
- .query({ activate: 'false' })
+ .query({ activate: 'true' })
  .type('application/json')
  .accept('json')
  .set('Authorization', 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx')
