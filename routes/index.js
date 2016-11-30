@@ -43,7 +43,7 @@ var options = { method: 'POST',
         "answer": formdata.answer
       }
     }
-  }
+  },
   qs: { activate: 'false' },
   headers: 
    { 'postman-token': 'b66dbe75-6590-d541-6930-b7fe44524c57',
