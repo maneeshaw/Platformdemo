@@ -50,7 +50,8 @@ console.log("hello");
    if (error || !response.ok) {
      console.log(error);
    } else {
-    var userId = response.id;
+    console.log(response)
+    var userId = response.user.id;
     var query = "?userId=" + userId; 
     var redirectUrl = "/applications"
     res.redirect(redirectUrl + query);
