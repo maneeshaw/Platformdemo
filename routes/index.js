@@ -69,10 +69,10 @@ router.get('/registration', function(req, res, next) {
 
 // Applications
 router.get('/applications', function(req, res, next) {
-  var userId = query.userId;
+  var userId = req.query.userId;
   var options = { 
     method: 'GET',
-    url: 'https://forest.okta.com/api/v1/users/userId/appLinks',
+    url: 'https://forest.okta.com/api/v1/users/'+ userId +'/appLinks',
     headers: 
         { 
           'cache-control': 'no-cache',
