@@ -39,7 +39,8 @@
             },
             function(res) {
               if (res.status === 'SUCCESS') {
-                res.session.setCookieAndRedirect(redirectUrl);
+                // res.session.setCookieAndRedirect(redirectUrl);
+                console.log(res.user)
               }
             }
           );

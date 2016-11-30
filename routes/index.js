@@ -71,7 +71,7 @@ router.get('/registration', function(req, res, next) {
 router.get('/applications', function(req, res, next) {
   var options = { 
     method: 'GET',
-    url: 'https://forest.okta.com/api/v1/users/me/appLinks',
+    url: 'https://forest.okta.com/api/v1/users/userId/appLinks',
     headers: 
         { 
           'cache-control': 'no-cache',
