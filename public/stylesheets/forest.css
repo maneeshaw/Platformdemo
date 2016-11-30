@@ -213,7 +213,11 @@ background-color: white;
   max-width: auto;
 }
 }
- footer{
-  position: fixed;
+ .footer{
+  
+  margin: auto;
+  margin-bottom: 0;
+  
+
  }
 
