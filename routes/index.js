@@ -5,6 +5,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 var request = require("request");
 var router = express.Router();
+var superrequest = require('superagent');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,49 +18,46 @@ router.get('/signin', function(req, res, next) {
   res.render('signin', { title: 'Sign In' });
 });
 
-router.post("/action",function(req, res){
-  console.log("hello");
 
-   
-var formdata = req.body;
-var jsondata = JSON.stringify({
-    "profile": {
-      "firstName": formdata.firstName,
-      "lastName": formdata.lastName,
-      "email": formdata.email,
-      "login": formdata.email
-    },
-    "credentials": {
-      "password" : { "value": formdata.password },
-      "recovery_question": {
-        "question": formdata.securityQuestion,
-        "answer": formdata.answer
-      }
-    } 
-  })
-var options = { 
-  method: 'POST',
-  url: 'https://forest.okta.com/api/v1/users',
-  formData: jsondata,
-  qs: { activate: 'false' },
-  headers: { 
-    'postman-token': 'b66dbe75-6590-d541-6930-b7fe44524c57',
-    'cache-control': 'no-cache',
-     authorization: 'SSWS 00Xa5X9HjCcctwhj47zX0GMuX4edvxuQByjy4aO3UW',
-     'content-type': 'application/json',
-     accept: 'application/json' 
-   } 
+
+router.post("/action",function(req, res){
+console.log("hello");
+
+ var data = {
+   "profile": {
+     "firstName": req.body.firstName,
+     "lastName": req.body.lastName,
+     "email": req.body.email,
+     "login": req.body.email
+   },
+   "credentials": {
+     "password" : { "value": req.body.password },
+     "recovery_question": {
+       "question": req.body.securityQuestion,
+       "answer": req.body.answer
+     }
+   }
  };
 
-console.log(options);
-request(options, function (error, response, body) {
-  if (error) throw new Error(error);
+ superrequest
+ .post('https://forest.okta.com/api/v1/users')
+ .query({ activate: 'false' })
+ .type('application/json')
+ .accept('json')
 
-  console.log(body);
+ .set('Authorization', 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx')
+
+ .send(data)
+ .end(function(error, res){
+   if (error || !res.ok) {
+     console.log(error);
+   } else {
+     console.log(res.body);
+   }
+ });
 });
 
 
-});
 // Registration
 
 router.get('/registration', function(req, res, next) {
