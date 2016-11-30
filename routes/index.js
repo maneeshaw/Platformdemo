@@ -50,7 +50,7 @@ console.log("hello");
    if (error || !response.ok) {
      console.log(error);
    } else {
-    res.redirect("/applications");
+    res.redirect("/signin");
      
    }
  });
