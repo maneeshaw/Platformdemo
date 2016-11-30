@@ -18,6 +18,7 @@ router.get('/signin', function(req, res, next) {
 });
 
 app.post("/action",function(req, res){
+  console.log("hello");
     var first_name = req.body.firstName;
     var last_name = req.body.lastName;
     var email = req.body.email;
