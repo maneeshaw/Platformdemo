@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://code.jquery.com/jquery-git.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" href="https://www.wwf.org.uk/sites/default/files/favicon.ico"/>
   <!-- Core widget js and css -->
   <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.7.0/js/okta-sign-in.min.js" type="text/javascript"></script>
@@ -18,12 +17,12 @@
 <div id="bg">
   <div class="module">
 
-    <form class="form" id="registration">
-      <input name="firstName" type="text" placeholder="First Name" class="textbox" />
-      <input name="lastName" type="text" placeholder="Last Name" class="textbox" />
-      <input name="email" type="text" placeholder="Email Address" class="textbox" />
-      <input name="password" type="password" placeholder="Password" class="textbox" />
-      <select name="securityQuestion" class="security-question-dropdown x-created textbox">
+    <form class="form" id="registration" action="/action" method="post">
+      <input id="firstName" type="text" placeholder="First Name" class="textbox" />
+      <input id="lastName" type="text" placeholder="Last Name" class="textbox" />
+      <input id="email" type="email" placeholder="Email Address" class="textbox" />
+      <input id="password" type="password" placeholder="Password" class="textbox" />
+      <select id="securityQuestion" class="security-question-dropdown x-created textbox">
                             <optgroup>
                               <option value="" selected="">Recovery Question</option>
                                 <option value="disliked_food">What is the food you least liked as a child?</option>
@@ -50,7 +49,7 @@
                                 <option value="custom">Create your own security question</option>
                             </optgroup>
                         </select>
-      <input name="answer" type="text" placeholder="Recovery Answer" class="textbox" />
+      <input id="answer" type="text" placeholder="Recovery Answer" class="textbox" />
       <button id="button" type="button" value="Submit" class="button">Submit</button>
     </form>
   </div>
@@ -60,111 +59,6 @@ Your account has created. Please check your email to activate your account and t
     <!-- Add an optional button to close the popup -->
     <button class="my_popup_close">Close</button>
 </div>
-
-<script type="text/javascript">
-  
-  $.fn.serializeObject = function()
-{
-   var o = {};
-   var a = this.serializeArray();
-   $.each(a, function() {
-       if (o[this.name]) {
-           if (!o[this.name].push) {
-               o[this.name] = [o[this.name]];
-           }
-           o[this.name].push(this.value || '');
-       } else {
-           o[this.name] = this.value || '';
-       }
-   });
-   return o;
-};
-</script>
-
-<script>
-    
-    $("#registration").submit(function(e) {
-      console.log("Submitted!");
-    });
-
-
-    $(function() {
-        $("#button").click( function()
-        {
-            var formdata = $("#registration").serialize();
-            console.log(formdata);
-            $.ajax({
-                type: "POST",
-                url: "https://forest.okta.com/api/v1/auth",
-                data: formdata,
-                dataType: "json",
-                headers: {
-                    "accept": "application/json",
-                    "content-type": "application/json",
-                    "authorization": "SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx"
-                    // cache-control: "no-cache",
-                    // "postman-token": "628d1039-829f-315f-5773-0e38f4dd5a03"
-                          },
-
-                // // success: function(data) { 
-                // //     //var obj = jQuery.parseJSON(data); if the dataType is not specified as json uncomment this
-                // //     // do what ever you want with the server response
-                // //     console.log(data);
-                // //     $('#activatedAccountPopup').popup();
-                // //    //TODO: Catch and display errors
-
-                //     window.location.href = "http://maneeshademo.com/application";
-                // },
-                error: function(){
-                    alert("error");
-                }
-            });
-        }
-        );
-    });
-
-</script>
-
-<script>
-
-//   var formdata = $("#registration").serializeObject();
-//   var data = {
-//     "profile": {
-//       "firstName": formdata.firstName,
-//       "lastName": formdata.lastName,
-//       "email": formdata.email,
-//       "login": formdata.email
-//     },
-//     "credentials": {
-//       "password" : { "value": formdata.password },
-//       "recovery_question": {
-//         "question": formdata.securityQuestion,
-//         "answer": formdata.answer
-//       }
-//     }
-//   }
-//   var settings = {
-//   "async": true,
-//   "crossDomain": true,
-//   "url": "https://forest.okta.com/api/v1/users?activate=true",
-//   "method": "POST",
-//   "data": JSON.stringify(data),
-//   "headers": {
-//     "accept": "application/json",
-//     "content-type": "application/json",
-//     "authorization": "SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx",
-//     "cache-control": "no-cache",
-//     "postman-token": "628d1039-829f-315f-5773-0e38f4dd5a03"
-//     }
-//   }
-
-//   $.ajax(settings).done(function (response) {
-//     window.location = "http://maneeshademo.com/application"
-//     console.log(response);
-//   });
-//   e.preventDefault(); // avoid to execute the actual submit of the form.
-// });
-</script>
 
 
 <!-- Footer -->
