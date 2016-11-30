@@ -18,11 +18,11 @@
   <div class="module">
 
     <form class="form" id="registration" action="/action" method="post">
-      <input id="firstName" type="text" placeholder="First Name" class="textbox" />
-      <input id="lastName" type="text" placeholder="Last Name" class="textbox" />
-      <input id="email" type="email" placeholder="Email Address" class="textbox" />
-      <input id="password" type="password" placeholder="Password" class="textbox" />
-      <select id="securityQuestion" class="security-question-dropdown x-created textbox">
+      <input name="firstName" type="text" placeholder="First Name" class="textbox" />
+      <input name="lastName" type="text" placeholder="Last Name" class="textbox" />
+      <input name="email" type="email" placeholder="Email Address" class="textbox" />
+      <input name="password" type="password" placeholder="Password" class="textbox" />
+      <select name="securityQuestion" class="security-question-dropdown x-created textbox">
                             <optgroup>
                               <option value="" selected="">Recovery Question</option>
                                 <option value="disliked_food">What is the food you least liked as a child?</option>
@@ -49,10 +49,12 @@
                                 <option value="custom">Create your own security question</option>
                             </optgroup>
                         </select>
-      <input id="answer" type="text" placeholder="Recovery Answer" class="textbox" />
-      <button id="button" type="button" value="Submit" class="button">Submit</button>
+      <input name="answer" type="text" placeholder="Recovery Answer" class="textbox" />
+      <input type="submit" value="Submit" class="button">Submit</input>
     </form>
   </div>
+
+
 </div>
 <div id="activatedAccountPopup">
 Your account has created. Please check your email to activate your account and to login.
@@ -66,4 +68,4 @@ Your account has created. Please check your email to activate your account and t
       <p>Copyright 2016 <span class="w3-hover-text-green">Maneesha Wijesighe</span></p>
     </footer>
 </body>
-</html>
+</htmlname
