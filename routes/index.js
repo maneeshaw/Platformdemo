@@ -98,7 +98,7 @@ request(options, function (error, response, body) {
 
 /* GET partners page. */
 router.get('/partners', function(req, res, next) {
-  res.render('Partners', { title: 'Partners' });
+  res.render('partners', { title: 'Partners' });
 });
 
 
