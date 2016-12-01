@@ -28,7 +28,8 @@ console.log("hello");
      "firstName": req.body.firstName,
      "lastName": req.body.lastName,
      "email": req.body.email,
-     "login": req.body.email
+     "login": req.body.email,
+     "petsName":req.body.petsName
    },
    "credentials": {
      "password" : { "value": req.body.password },
