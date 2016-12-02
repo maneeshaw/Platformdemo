@@ -46,11 +46,11 @@ h3{
 }
 
 .oktalogin {
-  max-width: 800px;
+  max-width: 950px;
 /*  height: 450px;*/
   /*background-color: #F1F1F1;*/
   background-color: rgba(255,255,255,0.5);
-/*  display: flex;*/
+  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-bottom: 75px;
