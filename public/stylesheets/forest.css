@@ -240,5 +240,6 @@ background-color: white;
 }
 
 .button:hover{
-  color: #ccc;
+  background: #44867c;
+  color: #ccc!important;
 }
