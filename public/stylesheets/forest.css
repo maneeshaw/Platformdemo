@@ -46,7 +46,6 @@ h3{
 }
 
 .oktalogin {
-  margin: 0 10%;
   width: auto;
 /*  height: 450px;*/
   /*background-color: #F1F1F1;*/
@@ -58,6 +57,7 @@ h3{
   border-radius: 5px;
   box-shadow: 1px 1px 5px #333;
   min-width: 300px;
+  position:relative;
 }
 
 .o-form-input-container {
@@ -77,7 +77,7 @@ h3{
   justify-content: center;
   align-items: center;
   padding: 30px 0;
-  position:relative;
+  
 }
 
 .box.left {
