@@ -129,3 +129,9 @@ width:100%;
     color: #498B7D!important;
     cursor: default;
 }
+
+.clearfix {
+    display: block;
+    margin-top: 50px;
+}
+
