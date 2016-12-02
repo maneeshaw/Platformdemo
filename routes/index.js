@@ -102,6 +102,12 @@ router.get('/partners', function(req, res, next) {
   res.render('partners', { title: 'Partners' });
 });
 
+// admin
+
+router.get('/admin', function(req, res, next) {
+  res.render('admin', { title: 'Admin' });
+});
+
 
 
 

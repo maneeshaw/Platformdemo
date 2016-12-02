@@ -30,11 +30,10 @@
   </div>
 
     <div class="oktalogin">
-      <div class="box left">
         <div id="okta-login-container"></div>
         <script type="text/javascript">
           var orgUrl = 'https://forest.okta.com';
-          var redirectUrl = "http://maneeshademo.com/applications"
+          var redirectUrl = "https://forest-admin.okta.com/admin/dashboard"
           var oktaSignIn = new OktaSignIn({
             baseUrl: orgUrl,
             features: {
@@ -59,16 +58,6 @@
             }
           );
         </script>
-      </div>
-
-      <div class="box right">
-        <div class='socialauth linkedin'><a>Linkedin</a></div>
-        <div class='socialauth facebook'><a>Facebook</a></div>
-        <div class='socialauth google'><a>Google</a></div>
-        <div class='socialauth microsoft'><a>Microsoft</a></div>
-        <div class='socialauth signup'><a href="/registration">Sign Up</a></div>
-      </div>
-    </div>
 
 <!-- Footer -->
     <footer class="w3-center w3-padding-16 footer" style="background-color:">
