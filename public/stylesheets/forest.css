@@ -57,7 +57,7 @@ h3{
   border-radius: 5px;
   box-shadow: 1px 1px 5px #333;
   min-width: 300px;
-  position:relative;
+  position:absolute;
 }
 
 .o-form-input-container {
