@@ -135,3 +135,13 @@ width:100%;
     margin-top: 50px;
 }
 
+.o-form-head+.o-form-explain {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #fff;
+}
