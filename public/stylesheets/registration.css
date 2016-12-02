@@ -123,3 +123,8 @@ width:100%;
   visibility: hidden;
   bottom: 0;
 }
+
+.w3-hover-text-green:hover {
+    color: #498B7D!important;
+    cursor: default;
+}
