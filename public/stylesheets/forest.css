@@ -243,3 +243,18 @@ background-color: white;
   background: #44867c;
   color: #ccc!important;
 }
+
+.clearfix {
+    display: block;
+    margin-top: 50px;
+}
+
+.o-form-explain {
+    color: #000!important;
+    font-weight: normal;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #fff;
+}
