@@ -135,10 +135,9 @@ width:100%;
     margin-top: 50px;
 }
 
-.o-form-head+.o-form-explain {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #000;
+.o-form-explain {
+    color: #000!important;
+    font-weight: normal;
 }
 
 a:link, a:visited, a:active {
