@@ -228,7 +228,7 @@ background-color: white;
 .button{
   background: #44867c;
   align-items: center;
-  width: 100%;
+  width: 100px;
   height: 50px;
   border-radius: 5px;
   color: #fff;
