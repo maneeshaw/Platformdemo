@@ -216,7 +216,7 @@ background-color: white;
   
   margin: auto;
   margin-bottom: 0;
-  
-
+  visibility: hidden;
+  bottom: 0;
  }
 
