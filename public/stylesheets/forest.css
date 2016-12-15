@@ -201,7 +201,8 @@ background-color: white;
     text-align: center;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
+
   .box.left{
  border-right: 0;
 }
@@ -212,6 +213,7 @@ background-color: white;
   max-width: auto;
 }
 }
+
  .footer{
   
   margin: auto;
