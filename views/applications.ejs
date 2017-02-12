@@ -20,11 +20,9 @@
       </li>
       <!-- Float links to the right. Hide them on small screens -->
       <li class="w3-right w3-hide-small">
-        <a href="/signin" class="w3-left">Clients</a>
-        <a href="/partners" class="w3-left">Partners</a>
-        <a href="/registration" class="w3-left">Sign Up</a>
-        <a href="https://forest-admin.okta.com/admin/dashboard" class="w3-left button" style="color: #fff">Admin</a>
-<!--         <a href="#Employees" class="w3-left w3-margin-right">Employees</a> -->
+        <a href="/profile" class="w3-left">Profile</a>
+        <a href=<%= "/applications?userId=" + userId %> class="w3-left">Apps</a>
+				<a href="https://forest-admin.okta.com/admin/dashboard" class="w3-left button" style="color: #fff; margin-right:20px;">Admin</a>
       </li>
     </ul>
   </div>
@@ -33,7 +31,7 @@
 <ul class="app-button-list clearfix ">
 	<% apps.forEach(function(app){ %>
 		<li class="app-button-wrapper">
-			 <a class="app-button" href="<%= app.linkUrl %>"> 
+			 <a class="app-button" href="<%= app.linkUrl %>">
 			 <img  src="<%= app.logoUrl %>" >
 			 <p class="app-button-name"><%= app.label %></p>
 			 </a>
@@ -45,7 +43,7 @@
 
 <!-- Footer -->
     <footer class=" footer w3-center w3-padding-16" style="background-color:">
-       <p>Copyright 2016 Maneesha Wijesighe    
+       <p>Copyright 2016 Maneesha Wijesighe
           <a href="https://forest.okta.com/home/zendesk/0oamnulxsJJriFU431t6/238" class="w3-hover-text-green">Contact Us </a>
        </p>
     </footer>

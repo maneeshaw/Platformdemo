@@ -6,7 +6,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 var request = require("request");
 var router = express.Router();
 var superrequest = require('superagent');
-var userId = '';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,7 +14,6 @@ router.get('/', function(req, res, next) {
 
 /* profile page */
 router.get('/profile', function(req, res, next) {
-  console.log('users/me');
   superrequest
   .get('https://forest.okta.com/api/v1/users/me')
   // .query({ activate: 'true' })
@@ -37,6 +35,7 @@ router.get('/profile', function(req, res, next) {
      };
 
      let profile = response.body.profile || maneesha;
+     profile.userId = response.body.id;
      res.render('profile', profile);
     }
   });
@@ -82,7 +81,7 @@ router.post("/action",function(req, res){
      console.log(error);
    } else {
     console.log(response)
-    userId = response.body.id;
+    var userId = response.body.id;
     var query = "?userId=" + userId;
     var redirectUrl = "/applications"
     res.redirect(redirectUrl + query);
@@ -118,7 +117,7 @@ request(options, function (error, response, body) {
   console.log(body);
 
   var apps = JSON.parse(body)
-    res.render('applications', { title: 'Applications', apps: apps });
+    res.render('applications', { title: 'Applications', apps: apps, userId: userId });
   });
 });
 
