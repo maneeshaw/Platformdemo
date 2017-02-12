@@ -6,10 +6,41 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 var request = require("request");
 var router = express.Router();
 var superrequest = require('superagent');
+var userId = '';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
+});
+
+/* profile page */
+router.get('/profile', function(req, res, next) {
+  console.log('users/me');
+  superrequest
+  .get('https://forest.okta.com/api/v1/users/me')
+  // .query({ activate: 'true' })
+  .type('application/json')
+  .accept('json')
+  .set('Authorization', 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx')
+  // .send(data)
+  .end(function(error, response){
+    if (error || !response.ok) {
+      console.log(error);
+    } else {
+     console.log(response.body)
+     var maneesha = {
+       title: 'Profile',
+       firstName: "Maneesha",
+       lastName: 'Wijesinghe',
+       email: 'maneesha@email.com',
+       petsName: 'Roofus'
+     };
+
+     let profile = response.body.profile || maneesha;
+     res.render('profile', profile);
+    }
+  });
+
 });
 
 
@@ -21,7 +52,6 @@ router.get('/signin', function(req, res, next) {
 
 
 router.post("/action",function(req, res){
-console.log("hello");
 
  var data = {
    "profile": {
@@ -52,8 +82,8 @@ console.log("hello");
      console.log(error);
    } else {
     console.log(response)
-    var userId = response.body.id;
-    var query = "?userId=" + userId; 
+    userId = response.body.id;
+    var query = "?userId=" + userId;
     var redirectUrl = "/applications"
     res.redirect(redirectUrl + query);
    }
@@ -62,11 +92,7 @@ console.log("hello");
 
 
 // Registration
-
 router.get('/registration', function(req, res, next) {
-
-
-
   res.render('registration', { title: 'Registration' });
 });
 
@@ -74,16 +100,16 @@ router.get('/registration', function(req, res, next) {
 // Applications
 router.get('/applications', function(req, res, next) {
   var userId = req.query.userId;
-  var options = { 
+  var options = {
     method: 'GET',
     url: 'https://forest.okta.com/api/v1/users/'+ userId +'/appLinks',
-    headers: 
-        { 
+    headers:
+        {
           'cache-control': 'no-cache',
            authorization: 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx',
           'content-type': 'application/json',
-           accept: 'application/json' 
-        } 
+           accept: 'application/json'
+        }
  };
 
 request(options, function (error, response, body) {
@@ -112,5 +138,3 @@ router.get('/admin', function(req, res, next) {
 
 
 module.exports = router;
-
-

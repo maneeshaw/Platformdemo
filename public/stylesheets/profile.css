@@ -1,0 +1,85 @@
+/* profile page* */
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.profile {
+  height: 650px;
+  width: 800px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  letter-spacing: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-fields, .change-password {
+  border: 1px solid black;
+  margin: 20px;
+  background: white;
+  width: 50%;
+}
+
+.profile-fields>strong, .change-password>strong {
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  background: #666;
+  color: white;
+  display: block;
+}
+
+.profile-field {
+  padding: 10px;
+  color: black;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  align-items: center;
+}
+
+.profile-field strong:nth-child(2n) {
+  font-weight: bold;
+  width: 70%;
+}
+
+.profile-field strong {
+  padding: 10px;
+  display: block;
+  width: 50%;
+}
+
+.change-password {
+  font-size: 12px;
+  background: white;
+  width: 40%;
+  /*height: 200px;*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.change-password p,
+.change-password label {
+    margin: 10px;
+}
+.change-password input {
+  width: 100%;
+}
+
+.change-password .button {
+  cursor: pointer;
+  width: auto;
+  margin: 10px 20px;
+}

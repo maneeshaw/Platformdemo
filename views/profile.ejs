@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forest</title>
+  <link rel="shortcut icon" href="https://www.wwf.org.uk/sites/default/files/favicon.ico"/>
+  <!-- Core widget js and css -->
+  <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.7.0/js/okta-sign-in.min.js" type="text/javascript"></script>
+  <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.7.0/css/okta-sign-in.min.css" type="text/css" rel="stylesheet">
+  <link href="custom-okta-login.css" type="text/css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="/stylesheets/forest.css">
+  <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+
+<body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top navbar">
+    <ul class="w3-navbar w3-white w3-wide w3-padding-8 w3-card-2">
+      <li>
+        <a href="http://www.maneeshademo.com" class="w3-margin-left"><b>Forest</b> </a>
+      </li>
+      <!-- Float links to the right. Hide them on small screens -->
+      <li class="w3-right w3-hide-small">
+        <a href="/signin" class="w3-left">Clients</a>
+        <a href="/partners" class="w3-left">Partners</a>
+        <a href="/registration" class="w3-left">Sign Up</a>
+<!--         <a href="#Employees" class="w3-left w3-margin-right">Employees</a> -->
+      </li>
+    </ul>
+  </div>
+
+  <!-- Page -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;height=100vw;positon:relative;" id="home">
+    <img class="w3-image" src="/images/Polar-Bear.jpg" alt="Architecture" width="1500" height="800" style="position:absolute;top:0;left:0;z-index:-1;">
+    <div class="profile-page">
+      <div class="profile">
+
+        <div class="profile-fields">
+          <strong>Your Info</strong>
+          <div class="profile-field">
+            <strong>First Name:</strong>
+            <strong><%= firstName %></strong>
+          </div>
+          <div class="profile-field">
+            <strong>Last Name:</strong>
+            <strong><%= lastName %></strong>
+          </div>
+          <div class="profile-field">
+            <strong>Email:</strong>
+            <strong><%= email %></strong>
+          </div>
+          <div class="profile-field">
+            <strong>Phone:</strong>
+            <strong><%= mobilePhone %></strong>
+          </div>
+          <div class="profile-field">
+            <strong>Pet's Name:</strong>
+            <strong><%= petsName %></strong>
+          </div>
+          <div class="profile-field">
+            <strong>Address</strong>
+            <strong><%= streetAddress %>, <%= city %>, <%= state %> <%= zipCode %></strong>
+          </div>
+          <div class="profile-field">
+            <strong>Title:</strong>
+            <strong><%= title %></strong>
+          </div>
+          <div class="profile-field">
+            <strong>Dept:</strong>
+            <strong><%= department %></strong>
+          </div>
+        </div>
+        <div class="change-password">
+          <strong>Change Password</strong>
+          <p>Your password must have at least 8 characters, a lowercase letter, an uppercase letter, a number, no parts of your username.</p>
+          <label>Enter current password:<input type='password' /></label>
+          <label>Enter new password:<input type='password' /></label>
+          <label>Repeat new password:<input type='password' /></label>
+          <div class='button'>Enter</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content -->
+
+<!-- Footer -->
+    <footer class=" w3-center w3-padding-16 footer" style="background-color: #14263A; position:fixed; bottom:0;left:0;right:0;">
+       <p>Copyright 2016 Maneesha Wijesighe
+          <a href="https://forest.okta.com/home/zendesk/0oamnulxsJJriFU431t6/238" class="w3-hover-text-green">Contact Us </a>
+       </p>
+    </footer>
+</body>
+</html>
