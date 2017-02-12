@@ -6,6 +6,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 var request = require("request");
 var router = express.Router();
 var superrequest = require('superagent');
+var userId = '';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -80,7 +81,7 @@ router.post("/action",function(req, res){
      console.log(error);
    } else {
     console.log(response)
-    var userId = response.body.id;
+    userId = response.body.id;
     var query = "?userId=" + userId;
     var redirectUrl = "/applications"
     res.redirect(redirectUrl + query);
