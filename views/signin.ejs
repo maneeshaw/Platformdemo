@@ -30,33 +30,31 @@
 
     <div class="oktalogin">
       <div class="box left">
-        <div id="okta-login-container"></div>
+        <div id="okta-login-container" class="auth-container main-container can-remove-beacon"></div>
         <script type="text/javascript">
           var orgUrl = 'https://forest.okta.com';
-          var redirectUrl = "http://maneeshademo.com/applications"
+          var redirectUrl = "http://maneeshademo.com/applications";
+
           var oktaSignIn = new OktaSignIn({
             baseUrl: orgUrl,
             logo: '/favicon.ico',
+            username: 'maneesha.wijesinghe',
             features: {
-                rememberMe: true,
-                smsRecovery: true,
-                selfServiceUnlock: true,
-                multiOptionalFactorEnroll: true,
-                autoPush: true
-                },
-
-
+              rememberMe: true,
+              smsRecovery: true,
+              selfServiceUnlock: true,
+              multiOptionalFactorEnroll: true,
+              autoPush: true,
+              securityImage: true
+            }
           });
-
           oktaSignIn.renderEl({
               el: '#okta-login-container'
             },
             function(res) {
               if (res.status === 'SUCCESS') {
-                var id = res.user.id;
-                var query = "?userId=" + id;
+                var query = "?userId=" + res.user.id;
                 res.session.setCookieAndRedirect(redirectUrl + query);
-                console.log(res.user)
               }
             }
           );

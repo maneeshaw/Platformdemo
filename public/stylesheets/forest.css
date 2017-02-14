@@ -37,6 +37,10 @@ h3{
   display: none;
 }*/
 
+.beacon-blank {
+  display: none;
+}
+
 #okta-sign-in .input-icon:before, #okta-sign-in .input-tooltip:before {
   color: transparent;
 }
