@@ -16,7 +16,6 @@ router.get('/', function(req, res, next) {
 router.get('/profile', function(req, res, next) {
   superrequest
   .get('https://forest.okta.com/api/v1/users/me')
-  // .query({ activate: 'true' })
   .type('application/json')
   .accept('json')
   .set('Authorization', 'SSWS 00BkztJXBuZRC4N8-MGHCHo4KW_AYEsXNg2SPEXTWx')

@@ -41,6 +41,12 @@ h3{
   display: none;
 }
 
+.custom-checkbox,
+.link.link-button,
+.link.help.js-help {
+  color: white;
+}
+
 #okta-sign-in .input-icon:before, #okta-sign-in .input-tooltip:before {
   color: transparent;
 }
