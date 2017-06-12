@@ -132,7 +132,9 @@ router.get('/admin', function(req, res, next) {
   res.render('admin', { title: 'Admin' });
 });
 
-
+router.get('/groups', function(req, res, next) {
+  res.render('groups', { title: 'Groups' });
+});
 
 
 module.exports = router;
