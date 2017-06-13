@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
   <link rel="stylesheet" href="/stylesheets/registration.css">
+	<link rel="stylesheet" href="/stylesheets/groups.css">
 </head>
 <body>
  <div class="w3-top navbar">
@@ -28,20 +29,23 @@
 
 <div id="bg">
   <div class="module">
-		<select name="groupName" class="security-question-dropdown x-created textbox">
-													<optgroup>
-														<option value="" selected="">Group Name</option>
-															<option value="group_a">Group A</option>
-															<option value="group_b">Group B</option>
-															<option value="group_c">Group C</option>
-															</optgroup>
-											</select>
-    <form class="form" id="registration" action="/action" method="post">
+		<div class="group-counts">
+			<p class="<%= groupAClass %>">Group A: <%= groupACount %></p>
+			<p class="<%= groupBClass %>">Group B: <%= groupBCount %></p>
+			<p class="<%= groupCClass %>">Group C: <%= groupCCount %></p>
+		</div>
+    <form class="form" id="registration" action="/new-group-user" method="post">
+			<select name="groupId" class="security-question-dropdown x-created textbox">
+				<option value="" selected="">Group Name</option>
+				<option value="00g2lfei407TmPOy41t7">Group A</option>
+				<option value="00g2lfeuappfbFCg51t7">Group B</option>
+				<option value="00g2lfdzlcD4Hj1qY1t7">Group C</option>
+			</select>
       <input name="firstName" type="text" placeholder="First Name" class="textbox" />
       <input name="lastName" type="text" placeholder="Last Name" class="textbox" />
       <input name="email" type="email" placeholder="Email Address" class="textbox" />
       <input name="password" type="password" placeholder="Password" class="textbox" />
-      <input type="submit" value="Submit" class="button"/>
+      <input type="submit" value="Submit" class="button" />
     </form>
   </div>
 
