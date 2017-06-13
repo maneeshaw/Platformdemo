@@ -192,9 +192,9 @@ router.get('/groups', function(req, res, next) {
         .then(data2 => {
           getGroupCount(groupIdC)
             .then(data3 => {
-              groupOKA = data1.length < 2
-              groupOKB = data2.length < 2
-              groupOKC = data3.length < 2
+              groupOKA = data1.length < 4
+              groupOKB = data2.length < 4
+              groupOKC = data3.length < 4
 
               return res.render('groups', {
                 title: 'Groups',
